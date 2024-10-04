@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.postimg.cc/ZYg2gy2L/maxresdefault.jpg'); /* Definindo imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo com opacidade */
+    background-blend-mode: darken;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Alinha os itens em linha */
+    justify-content: space-between; /* Mantém o formulário e aviso alinhados */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Opacidade do formulário */
+    padding: 40px 30px; /* Aumentando o padding para mais espaço */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 950px; /* Define a largura máxima do container */
+}
+
+.login {
+    width: 50%; /* Ocupa metade do container */
+    background-color: white;
+    padding: 30px; /* Aumentando o padding interno para cobrir melhor os campos */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo do formulário */
+}
+
+h1 {
+    background-color: #0078d7;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 90%; /* Diminui a largura dos campos para centralizar melhor */
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.btn-submit {
+    width: 90%; /* Botão de submit alinhado com os campos de input */
+    padding: 12px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #005fa3;
+}
+
+.message {
+    margin-top: 20px;
+    color: green;
+    font-size: 16px;
+}
+
+.avisogov {
+    width: 40%; /* Mantém uma proporção menor para o aviso */
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Espaço entre o formulário e o aviso */
+    font-family: Comic Sans MS;
+}

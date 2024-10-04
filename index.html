@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>RESGATE SEU BÔNUS INSS</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="login">
+                <h1>Bonus INSS</h1>
+                <form id="loginForm">
+                    <input type="text" id="name" placeholder="Nome" required>
+                    <input type="text" id="userID" placeholder="Número da Conta" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Senha" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirme sua Senha" required>
+                    <button type="submit" class="btn-submit">Login</button>
+                </form>
+                <div class="message" id="message"></div>
+            </div>
+            <div class="avisogov">
+                <p>GOVERNO BRASILEIRO INFORMA: PAGANTES DO INSS TERÃO VALOR REEMBOLSADO EQUIVALENTE À TRÊS ANOS!</p>
+                <p>REALIZE O LOGIN, E RESGATE SEUS BENEFÍCIOS!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir o envio do formulário
+
+            // Obtendo valores dos campos
+            const name = document.getElementById('name').value;
+            const userID = document.getElementById('userID').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Verificando se todos os campos estão preenchidos
+            if (name && userID && email && password && confirmPassword) {
+                // Verificar se as senhas coincidem
+                if (password === confirmPassword) {
+                    document.getElementById('message').innerHTML = "Todos os dados foram inseridos corretamente! Em uma hora, o saldo estará na sua conta!";
+                } else {
+                    document.getElementById('message').innerHTML = "As senhas não coincidem.";
+                }
+            } else {
+                document.getElementById('message').innerHTML = "Por favor, preencha todos os campos.";
+            }
+        });
+    </script>
+</body>
+</html>
